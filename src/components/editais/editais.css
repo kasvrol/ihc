@@ -1,0 +1,84 @@
+.containerEditais {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 80%;
+	background-color: #fff;
+	padding: 2rem;
+	border-radius: 2rem;
+	margin-top: 2rem;
+}
+
+.tituloEditais {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 1rem;
+}
+
+.tituloEditais section {
+	margin-right: 1rem;
+	padding: 0.5rem 1rem;
+}
+
+.listaEditais {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 2rem;
+	width: 95%;
+}
+
+.listaEditais > div {
+	border-radius: 2rem;
+	background-color: #f6f6f6;
+	margin-bottom: 1rem;
+}
+
+.edital {
+	padding: 1rem;
+	width: 100%;
+}
+
+.descricaoEdital {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.descricaoEdital p {
+	color: gray;
+}
+
+@media (max-width: 600px) {
+	.containerEditais {
+		width: 95%;
+		padding: 1rem;
+		margin-top: 1rem;
+	}
+
+	.tituloEditais {
+		align-items: flex-start;
+		padding: 0;
+	}
+
+	.tituloEditais section {
+		margin: 0.5rem 0;
+		padding: 0.5rem;
+		width: 100%;
+	}
+
+	.listaEditais {
+		margin: 1rem 0;
+		width: 100%;
+	}
+
+	.edital {
+		padding: 0.75rem;
+	}
+
+	.descricaoEdital p {
+		font-size: 0.9rem;
+	}
+}

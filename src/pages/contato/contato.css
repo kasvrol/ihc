@@ -1,0 +1,78 @@
+.containerContato {
+	display: flex;
+  flex-direction: column;
+	min-height: 80vh;
+  width: 100%;
+	
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #F6F6F6;
+}
+
+.contatoFormulario{
+	max-width: 77rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 80%;
+	background-color: #fff;
+	padding: 2rem;
+	border-radius: 2rem;
+	margin-top: 2rem;
+}
+
+.formulario{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.contatoEmail{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.itemFormularioContato{
+	width: 100%;
+	max-width: 72rem;
+	margin-right: 2rem;
+	background-color: #F6F6F6;
+	padding: 1.5rem 1.5rem 2rem 1.5rem;
+	border-radius: 1rem;
+}
+
+.contatoEmail .itemFormularioContato{
+	width: 100%;
+	max-width: 35rem;
+	margin-right: 2rem;
+	background-color: #F6F6F6;
+	padding: 1.5rem 1.5rem 2rem 1.5rem;
+	border-radius: 1rem;
+}
+
+.textoContato{
+	width: 100%;
+	max-width: 72rem;
+	background-color: #F6F6F6;
+	padding: 1.5rem 1.5rem 2rem 1.5rem;
+	border-radius: 1rem;
+}
+
+.itemFormularioContato input{
+	width:50%;
+}
+
+@media (max-width: 600px) {
+	.contatoFormulario {
+		width: 95%;
+		padding: 1rem;
+		margin-top: 1rem;
+	}
+
+	.formulario{
+		align-items: center;
+	}
+	
+}

@@ -1,9 +1,9 @@
 .containerInicio {
 	display: flex;
-  flex-direction: column;
-	min-height:80vh ;
-  width: 100%;
+	flex-direction: column;
+	min-height: 80vh;
+	width: 100%;
 	justify-content: flex-start;
 	align-items: center;
-	background-color: #F6F6F6;
+	background-color: #f6f6f6;
 }

@@ -1,0 +1,89 @@
+.containerManualSite {
+	display: flex;
+	flex-direction: column;
+	min-height: 80vh;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #f6f6f6;
+}
+
+.ManualSite{
+	max-width: 77rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 80%;
+	background-color: #fff;
+	padding: 2rem;
+	border-radius: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+}
+
+.divManual{
+	text-align: center;
+	width: 100%;
+	height: 10rem;
+	border-radius: 2rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #1659BF;
+	padding: 2rem;
+	color: #fff;
+	font-weight: 1000;
+	font-size: 3rem;
+	max-width: 73rem;	
+}
+
+.divManual p{
+	width: 40%;
+}
+
+.videoManual{
+	width: 100%;
+	margin: 2rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+@media (max-width: 768px) {
+	.ManualSite {
+		width: 95%;
+		padding: 1.5rem;
+	}
+
+	.divManual {
+		flex-direction: column;
+		height: auto;
+		padding: 1.5rem 1rem;
+		font-size: 2.2rem;
+		text-align: center;
+		gap: 1rem;
+	}
+
+	.divManual p {
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.ManualSite {
+		width: 100%;
+		padding: 1rem;
+		border-radius: 1rem;
+	}
+
+	.divManual {
+		padding: 1rem;
+		font-size: 1.8rem;
+	}
+
+	.divManual p {
+		font-size: 1.6rem;
+	}
+}

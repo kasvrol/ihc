@@ -1,0 +1,85 @@
+.formularioImpugnacao{
+  display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+
+.itemFormularioContato{
+	width: 100%;
+	max-width: 72rem;
+	margin-right: 2rem;
+	background-color: #F6F6F6;
+	padding: 1.5rem 1.5rem 2rem 1.5rem;
+	border-radius: 1rem;
+}
+
+.itemFormularioContatoInteiro{
+  width: 100%;
+	max-width: 75rem;
+  margin-right: 2rem;
+	background-color: #F6F6F6;
+	padding: 1.5rem 1.5rem 2rem 1.5rem;
+	border-radius: 1rem;
+}
+
+.itemFormularioCampoPequeno{
+  width: 100%;
+	max-width: 15rem;
+  min-width: 15rem;
+  margin-right: 2rem;
+	background-color: #F6F6F6;
+	padding: 1.5rem 2rem 2rem 2rem;
+	border-radius: 1rem;
+}
+
+.contatoImpugnacao{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.contatoImpugnacao .itemFormularioContato{
+	width: 100%;
+	margin-right: 2rem;
+	background-color: #F6F6F6;
+	padding: 1.5rem 1.5rem 2rem 1.5rem;
+	border-radius: 1rem;
+}
+
+.inputImpugnacao{
+  width: 20rem;
+}
+
+@media (max-width: 600px) {
+  .formularioImpugnacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+	.contatoImpugnacao {
+		width: 95%;
+    flex-direction: column;
+	}
+
+  .itemFormularioContatoInteiro{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 1rem;
+  }
+
+  .itemFormularioCampoPequeno{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 1rem;
+  }
+
+  .contatoImpugnacao .itemFormularioContato{
+    margin-right: 0;
+  }
+	
+}

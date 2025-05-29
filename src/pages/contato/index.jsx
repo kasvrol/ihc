@@ -29,7 +29,6 @@ function Contato() {
 					autoComplete="on"
 					aria-label="Formulário de Contato"
 					className="formulario"
-					style={{ width: "100%" }}
 				>
 					<Form.Item
 						label="Nome"

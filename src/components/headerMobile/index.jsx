@@ -33,7 +33,6 @@ const HeaderMobile = () => {
 				Menu
 			</Button>
 
-			{/* Menu lateral */}
 			<Drawer
 				title="Navegação"
 				placement="left"
@@ -54,15 +53,6 @@ const HeaderMobile = () => {
 						Contato para Recurso ou Imopugnação
 						</Menu.Item>
 					</Link>
-						<Menu.Item key="web">
-							Desenvolvimento Web
-						</Menu.Item>
-						<Menu.Item key="mobile">
-							Desenvolvimento Mobile
-						</Menu.Item>
-						<Menu.Item key="design">
-							Design UI/UX
-						</Menu.Item>
 					</SubMenu>
 
 					<SubMenu key="sobre" title="Sobre">
@@ -85,7 +75,7 @@ const HeaderMobile = () => {
 					</Link>
 					<Link to={"/curriculo"}>
 						<Menu.Item key="curriculo">
-							Quem contruiu o site
+							Quem construiu o site
 						</Menu.Item>
 					</Link>
 				</Menu>

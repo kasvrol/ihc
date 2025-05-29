@@ -1,66 +1,59 @@
 import React, { useState } from "react";
+import { Menu } from "antd";
 import {
 	AppstoreOutlined,
 	MailOutlined,
 	SettingOutlined,
 } from "@ant-design/icons";
-import { Menu } from "antd";
+import { Link } from "react-router-dom";
+
 const items = [
 	{
-		key: "inicio",
-		label: (
-			<a
-				href="https://ant.design"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				Início
-			</a>
-		),
+		key: "home",
+		label: <Link to="/">Início</Link>,
+		icon: <AppstoreOutlined />,
 	},
 	{
-		label: "UAB",
 		key: "uab",
-		icon: <SettingOutlined />,
+		label: "UAB",
 		children: [
 			{
-				type: "group",
-				label: "Item 1",
-				children: [
-					{ label: "Option 1", key: "setting:1" },
-					{ label: "Option 2", key: "setting:2" },
-				],
+				label: <Link to="/uab-impugnacao">Contato para Recurso ou Impugnação</Link>,
+				key: "uab-impugnacao",
+			},
+		],
+	},
+	{
+		key: "sobre",
+		label: "Sobre",
+		children: [
+			{
+				label: <Link to="/cursos-ead">Cursos com carga horária EaD</Link>,
+				key: "cursos-ead",
 			},
 			{
-				type: "group",
-				label: "Item 2",
-				children: [
-					{ label: "Option 3", key: "setting:3" },
-					{ label: "Option 4", key: "setting:4" },
-				],
+				label: <Link to="/manual-site">Manual do Site</Link>,
+				key: "manual-site",
 			},
 		],
 	},
 	{
 		key: "contato",
-		label: (
-			<a
-				href="https://ant.design"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				Contato
-			</a>
-		),
+		label: <Link to="/contato">Contato</Link>,
+	},
+	{
+		key: "curriculo",
+		label: <Link to="/curriculo">Quem construiu o site</Link>,
 	},
 ];
 
 const HeaderDesktop = () => {
-	const [current, setCurrent] = useState("inicio");
+	const [current, setCurrent] = useState("home");
+
 	const onClick = (e) => {
-		console.log("click ", e);
 		setCurrent(e.key);
 	};
+
 	return (
 		<Menu
 			onClick={onClick}
@@ -70,4 +63,5 @@ const HeaderDesktop = () => {
 		/>
 	);
 };
+
 export default HeaderDesktop;

@@ -1,0 +1,29 @@
+.containerListaCursos {
+	display: flex;
+	flex-direction: column;
+	min-height: 80vh;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #f6f6f6;
+}
+
+.listaPricipal{
+	max-width: 77rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 80%;
+	background-color: #fff;
+	padding: 2rem;
+	border-radius: 2rem;
+	margin-top: 2rem;
+}
+
+.listaDiciplinas{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start !important;
+	justify-content: flex-start;
+}

@@ -1,76 +1,96 @@
 import React, { useState } from "react";
-import {
-	AppstoreOutlined,
-	ContainerOutlined,
-	DesktopOutlined,
-	MailOutlined,
-	MenuFoldOutlined,
-	MenuUnfoldOutlined,
-	PieChartOutlined,
-} from "@ant-design/icons";
-import { Button, Menu } from "antd";
+import { Menu, Drawer, Button } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
-const items = [
-	{ key: "1", icon: <PieChartOutlined />, label: "Option 1" },
-	{ key: "2", icon: <DesktopOutlined />, label: "Option 2" },
-	{ key: "3", icon: <ContainerOutlined />, label: "Option 3" },
-	{
-		key: "sub1",
-		label: "Navigation One",
-		icon: <MailOutlined />,
-		children: [
-			{ key: "5", label: "Option 5" },
-			{ key: "6", label: "Option 6" },
-			{ key: "7", label: "Option 7" },
-			{ key: "8", label: "Option 8" },
-		],
-	},
-	{
-		key: "sub2",
-		label: "Navigation Two",
-		icon: <AppstoreOutlined />,
-		children: [
-			{ key: "9", label: "Option 9" },
-			{ key: "10", label: "Option 10" },
-			{
-				key: "sub3",
-				label: "Submenu",
-				children: [
-					{ key: "11", label: "Option 11" },
-					{ key: "12", label: "Option 12" },
-				],
-			},
-		],
-	},
-];
+const { SubMenu } = Menu;
 
 const HeaderMobile = () => {
-	const [collapsed, setCollapsed] = useState(false);
-	const toggleCollapsed = () => {
-		setCollapsed(!collapsed);
+	const [visible, setVisible] = useState(false);
+
+	const showDrawer = () => {
+		setVisible(true);
 	};
+
+	const onClose = () => {
+		setVisible(false);
+	};
+
 	return (
-		<div style={{ width: 256 }}>
+		<>
+			{/* Botão hamburguer */}
 			<Button
 				type="primary"
-				onClick={toggleCollapsed}
-				style={{ marginBottom: 16 }}
+				icon={<MenuOutlined />}
+				onClick={showDrawer}
+				style={{
+					position: "fixed",
+					top: 20,
+					left: 20,
+					zIndex: 1000,
+				}}
 			>
-				{collapsed ? (
-					<MenuUnfoldOutlined />
-				) : (
-					<MenuFoldOutlined />
-				)}
+				Menu
 			</Button>
-			<Menu
-				defaultSelectedKeys={["1"]}
-				defaultOpenKeys={["sub1"]}
-				mode="inline"
-				theme="dark"
-				inlineCollapsed={collapsed}
-				items={items}
-			/>
-		</div>
+
+			{/* Menu lateral */}
+			<Drawer
+				title="Navegação"
+				placement="left"
+				onClose={onClose}
+				visible={visible}
+				width={250}
+			>
+				<Menu mode="inline">
+					<Link to={"/"}>
+						<Menu.Item key="home">
+							Início
+						</Menu.Item>
+					</Link>
+
+					<SubMenu key="UAB" title="UAB">
+					<Link to={"/uab-impugnacao"}>
+						<Menu.Item key="uab-impugnacao">
+						Contato para Recurso ou Imopugnação
+						</Menu.Item>
+					</Link>
+						<Menu.Item key="web">
+							Desenvolvimento Web
+						</Menu.Item>
+						<Menu.Item key="mobile">
+							Desenvolvimento Mobile
+						</Menu.Item>
+						<Menu.Item key="design">
+							Design UI/UX
+						</Menu.Item>
+					</SubMenu>
+
+					<SubMenu key="sobre" title="Sobre">
+					<Link to={"/"}>
+						<Menu.Item key="cursos-ead">
+						Cursos com carga horária EaD
+						</Menu.Item>
+					</Link>
+					<Link to={"/manual-site"}>
+						<Menu.Item key="manual-site">
+						Manual do Site
+						</Menu.Item>
+					</Link>
+					</SubMenu>
+
+					<Link to={"/contato"}>
+						<Menu.Item key="contato">
+							Contato
+						</Menu.Item>
+					</Link>
+					<Link to={"/curriculo"}>
+						<Menu.Item key="curriculo">
+							Quem contruiu o site
+						</Menu.Item>
+					</Link>
+				</Menu>
+			</Drawer>
+		</>
 	);
 };
 export default HeaderMobile;

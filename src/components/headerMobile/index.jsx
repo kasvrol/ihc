@@ -47,6 +47,20 @@ const HeaderMobile = () => {
 						</Menu.Item>
 					</Link>
 
+					<SubMenu key="legislacao" title="Legislações EAD">
+						<Link to={"/legislacoes"}>
+							<Menu.Item key="legislacoes">
+								Legislações e Pareceres
+							</Menu.Item>
+						</Link>
+
+						<Link to={"/instrumentos-avaliacao"}>
+							<Menu.Item key="instrumentos-avaliacao">
+								Instrumentos de Avaliação (INEP)
+							</Menu.Item>
+						</Link>
+					</SubMenu>
+
 					<SubMenu key="UAB" title="UAB">
 					<Link to={"/uab-impugnacao"}>
 						<Menu.Item key="uab-impugnacao">

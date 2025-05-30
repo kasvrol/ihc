@@ -7,6 +7,9 @@ import FormularioImpugnacao from './pages/impugnacao';
 import ListaCursosEaD from './pages/listaCursosEaD';
 import CriadoresVitrine from './pages/curriculo';
 import ManualSite from './pages/manualSite';
+import Legislacao from "./pages/legislacao/index.jsx";
+import Inep from "./pages/inep/index.jsx";
+import Cne from "./pages/cne/index.jsx";
 
 function App() {
 
@@ -20,7 +23,10 @@ function App() {
           <Route path="/cursos-ead" element={<ListaCursosEaD />} />
           <Route path="/curriculo" element={<CriadoresVitrine />} />
           <Route path="/manual-site" element={<ManualSite />} />
-          <Route path="/sobre" element={<ListaCursosEaD />} />       
+          <Route path="/sobre" element={<ListaCursosEaD />} />
+          <Route path="/legislacoes" element={<Legislacao />} />
+          <Route path="/instrumentos-avaliacao" element={<Inep />} />
+          <Route path="/pareceres" element={<Cne />} />
         </Route>
       </Routes>
     </BrowserRouter>  
@@ -28,4 +34,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

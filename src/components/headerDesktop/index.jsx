@@ -14,6 +14,20 @@ const items = [
 		icon: <AppstoreOutlined />,
 	},
 	{
+		key: "legislacao",
+		label: "Legislações EAD",
+		children: [
+			{
+				label: <Link to="/legislacoes">Legislações e Pareceres</Link>,
+				key: "legislacoes",
+			},
+			{
+				label: <Link to="/instrumentos-avaliacao">Instrumentos de Avaliação (INEP)</Link>,
+				key: "instrumentos-avaliacao",
+			},
+		],
+	},
+	{
 		key: "uab",
 		label: "UAB",
 		children: [

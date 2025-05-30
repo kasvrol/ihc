@@ -35,6 +35,10 @@ const items = [
 				label: <Link to="/uab-impugnacao">Recurso ou Impugnação</Link>,
 				key: "uab-impugnacao",
 			},
+			{
+				label: <Link to="/orientacoes-gerais">Orientações Gerais</Link>,
+				key: "orientacoes-gerais",
+			},
 		],
 	},
 	{

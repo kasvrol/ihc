@@ -67,6 +67,12 @@ const HeaderMobile = () => {
 						Recurso ou Impugnação
 						</Menu.Item>
 					</Link>
+
+						<Link to={"/orientacoes-gerais"}>
+							<Menu.Item key="orientacoes-gerais">
+								Orientações Gerais
+							</Menu.Item>
+						</Link>
 					</SubMenu>
 
 					<SubMenu key="sobre" title="Sobre">

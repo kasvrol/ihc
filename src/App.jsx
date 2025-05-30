@@ -10,6 +10,7 @@ import ManualSite from './pages/manualSite';
 import Legislacao from "./pages/legislacao/index.jsx";
 import Inep from "./pages/inep/index.jsx";
 import Cne from "./pages/cne/index.jsx";
+import OrientacoesGerais from "./pages/orientacoes/index.jsx";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/legislacoes" element={<Legislacao />} />
           <Route path="/instrumentos-avaliacao" element={<Inep />} />
           <Route path="/pareceres" element={<Cne />} />
+          <Route path="/orientacoes-gerais" element={<OrientacoesGerais />} />
         </Route>
       </Routes>
     </BrowserRouter>  

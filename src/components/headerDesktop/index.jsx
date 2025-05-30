@@ -18,7 +18,7 @@ const items = [
 		label: "UAB",
 		children: [
 			{
-				label: <Link to="/uab-impugnacao">Contato para Recurso ou Impugnação</Link>,
+				label: <Link to="/uab-impugnacao">Recurso ou Impugnação</Link>,
 				key: "uab-impugnacao",
 			},
 		],
@@ -43,7 +43,7 @@ const items = [
 	},
 	{
 		key: "curriculo",
-		label: <Link to="/curriculo">Quem construiu o site</Link>,
+		label: <Link to="/curriculo">Desenvolvedores</Link>,
 	},
 ];
 

@@ -1,85 +1,386 @@
-.formularioImpugnacao{
-  display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	width: 100%;
-}
-
-
-.itemFormularioContato{
-	width: 100%;
-	max-width: 72rem;
-	margin-right: 2rem;
-	background-color: #F6F6F6;
-	padding: 1.5rem 1.5rem 2rem 1.5rem;
-	border-radius: 1rem;
-}
-
-.itemFormularioContatoInteiro{
-  width: 100%;
-	max-width: 75rem;
-  margin-right: 2rem;
-	background-color: #F6F6F6;
-	padding: 1.5rem 1.5rem 2rem 1.5rem;
-	border-radius: 1rem;
-}
-
-.itemFormularioCampoPequeno{
-  width: 100%;
-	max-width: 15rem;
-  min-width: 15rem;
-  margin-right: 2rem;
-	background-color: #F6F6F6;
-	padding: 1.5rem 2rem 2rem 2rem;
-	border-radius: 1rem;
-}
-
-.contatoImpugnacao{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.contatoImpugnacao .itemFormularioContato{
-	width: 100%;
-	margin-right: 2rem;
-	background-color: #F6F6F6;
-	padding: 1.5rem 1.5rem 2rem 1.5rem;
-	border-radius: 1rem;
-}
-
-.inputImpugnacao{
-  width: 20rem;
-}
-
-@media (max-width: 600px) {
-  .formularioImpugnacao{
+.formularioImpugnacao {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 24px;
+}
 
-	.contatoImpugnacao {
-		width: 95%;
+/* Aplicando lei da proximidade - agrupando elementos relacionados */
+.grupo-campos {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Aplicando lei da repetição - padrões consistentes para tipos de campos */
+.campo-formulario {
+    background-color: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.campo-formulario:hover {
+    border-color: #d9d9d9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.campo-completo {
+    flex: 1;
+    min-width: 100%;
+}
+
+.campo-medio {
+    flex: 1;
+    min-width: 300px;
+}
+
+.campo-pequeno {
+    flex: 0 0 200px;
+    min-width: 200px;
+}
+
+/* Aplicando lei do alinhamento - estrutura visual clara */
+.secao-formulario {
+    margin-bottom: 32px;
+}
+
+.secao-titulo {
+    font-size: 16px;
+    font-weight: 600;
+    color: #262626;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* Aplicando lei do contraste - hierarquia visual */
+.botao-envio {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-principal {
+    font-size: 24px;
+    font-weight: 600;
+    color: #262626;
+    margin-bottom: 32px;
+    text-align: center;
+    padding-bottom: 16px;
+    border-bottom: 3px solid #1890ff;
+}
+
+/* Melhorando a área de upload */
+.area-upload {
+    border: 2px dashed #d9d9d9;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.area-upload:hover {
+    border-color: #1890ff;
+    background-color: #f6ffed;
+}
+
+/* Radio groups com melhor espaçamento */
+.grupo-radio {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 768px) {
+    .formularioImpugnacao {
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    .grupo-campos {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .campo-formulario {
+        padding: 12px;
+    }
+
+    .campo-pequeno,
+    .campo-medio {
+        flex: 1;
+        min-width: 100%;
+    }
+
+    .secao-formulario {
+        margin-bottom: 24px;
+    }
+
+    .titulo-principal {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .secao-titulo {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .formularioImpugnacao {
+        padding: 0 8px;
+    }
+
+    .campo-formulario {
+        padding: 8px;
+    }
+
+    .titulo-principal {
+        font-size: 18px;
+    }
+
+    .grupo-radio {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+.containerEditais {
+    display: flex;
     flex-direction: column;
-	}
-
-  .itemFormularioContatoInteiro{
+    align-items: flex-start;
+    justify-content: flex-start;
     width: 100%;
-    max-width: 100%;
-    min-width: 100%;
-    margin: 1rem;
-  }
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 24px;
+}
 
-  .itemFormularioCampoPequeno{
+/* Aplicando lei do alinhamento - cabeçalho estruturado */
+.tituloEditais {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 24px 0;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #f0f0f0;
     width: 100%;
-    max-width: 100%;
-    min-width: 100%;
-    margin: 1rem;
-  }
+}
 
-  .contatoImpugnacao .itemFormularioContato{
-    margin-right: 0;
-  }
-	
+.tituloEditais section {
+    margin-right: 16px;
+    padding: 8px 16px;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #d9d9d9;
+}
+
+.tituloEditais section:hover {
+    background-color: #e6f7ff;
+    border-color: #1890ff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(24, 144, 255, 0.15);
+}
+
+.tituloEditais h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #262626;
+}
+
+/* Aplicando lei da proximidade - lista bem estruturada */
+.listaEditais {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Aplicando lei da repetição - padrão consistente para cards */
+.listaEditais > div {
+    border-radius: 12px;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f0;
+    width: 100%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.listaEditais > div:hover {
+    border-color: #d9d9d9;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.edital {
+    padding: 24px;
+    width: 100%;
+}
+
+/* Aplicando lei do contraste - hierarquia visual clara */
+.edital .ant-descriptions-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #262626;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    border-bottom: none;
+}
+
+.descricaoEdital {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+}
+
+.descricaoEdital article {
+    color: #595959;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.descricaoEdital p {
+    color: #8c8c8c;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+    padding: 4px 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.descricaoEdital a {
+    color: #1890ff;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    background-color: #e6f7ff;
+    border-radius: 6px;
+    width: fit-content;
+    transition: all 0.3s ease;
+    border: 1px solid #91d5ff;
+}
+
+.descricaoEdital a:hover {
+    background-color: #1890ff;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(24, 144, 255, 0.3);
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 768px) {
+    .containerEditais {
+        width: 95%;
+        padding: 20px;
+        margin-top: 16px;
+        border-radius: 8px;
+    }
+
+    .tituloEditais {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 0 16px 0;
+        margin-bottom: 16px;
+        gap: 12px;
+    }
+
+    .tituloEditais section {
+        margin: 0;
+        padding: 6px 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .tituloEditais h3 {
+        font-size: 16px;
+    }
+
+    .listaEditais {
+        gap: 16px;
+    }
+
+    .edital {
+        padding: 16px;
+    }
+
+    .edital .ant-descriptions-title {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .descricaoEdital article {
+        font-size: 13px;
+    }
+
+    .descricaoEdital p {
+        font-size: 12px;
+    }
+
+    .descricaoEdital a {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerEditais {
+        padding: 16px;
+        margin-top: 12px;
+    }
+
+    .tituloEditais {
+        padding: 0 0 12px 0;
+        margin-bottom: 12px;
+    }
+
+    .tituloEditais section {
+        padding: 4px 8px;
+    }
+
+    .tituloEditais h3 {
+        font-size: 14px;
+    }
+
+    .listaEditais {
+        gap: 12px;
+    }
+
+    .edital {
+        padding: 12px;
+    }
+
+    .edital .ant-descriptions-title {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .descricaoEdital {
+        gap: 8px;
+    }
+
+    .descricaoEdital article {
+        font-size: 12px;
+    }
 }

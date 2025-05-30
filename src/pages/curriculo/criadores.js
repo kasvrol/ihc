@@ -36,7 +36,7 @@ export const criadores = [
 		descricao: "Atualmente cursando Análise e Desenvolvimento de Sistemas pela UFPR. \nCom 2 anos de experiência em desenvolvimento de software, possuo um histórico de sucesso em projetos de comércio exterior, utilizando tecnologias como Spring Boot, AngularJS, PostgreSQL. Sou apaixonado por desafios técnicos e por criar soluções que impactam positivamente os negócios.",
 		imagem: "https://media.licdn.com/dms/image/v2/D4D03AQFnG40CQYTJFQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1710527609252?e=1753920000&v=beta&t=bFDhZ0VUqQ3Mp6qIeCoYOsuR4omEl04O-5PGRqNXd7Q",
 		linkedin: "https://www.linkedin.com/in/nelson-meduna/",
-		github: "https://github.com/carlossouza",
-		email: "carlos.souza@email.com",
+		github: "https://github.com/the-nelso",
+		email: "nelsonmeduna34@gmail.com",
 	},
 ];

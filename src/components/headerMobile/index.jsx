@@ -50,7 +50,7 @@ const HeaderMobile = () => {
 					<SubMenu key="UAB" title="UAB">
 					<Link to={"/uab-impugnacao"}>
 						<Menu.Item key="uab-impugnacao">
-						Contato para Recurso ou Imopugnação
+						Recurso ou Impugnação
 						</Menu.Item>
 					</Link>
 					</SubMenu>
@@ -74,8 +74,8 @@ const HeaderMobile = () => {
 						</Menu.Item>
 					</Link>
 					<Link to={"/curriculo"}>
-						<Menu.Item key="curriculo">
-							Quem construiu o site
+						<Menu.Item key="curriculo">	
+							Desenvolvedores
 						</Menu.Item>
 					</Link>
 				</Menu>

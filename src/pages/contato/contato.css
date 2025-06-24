@@ -1,79 +1,81 @@
 .containerContato {
 	display: flex;
-  flex-direction: column;
-	min-height: 80vh;
-  width: 100%;
-	
-	justify-content: flex-start;
-	align-items: center;
-	background-color: #F6F6F6;
+	flex-direction: column;
+	min-height: 80vh; /* Recomendo usar min-height: calc(100vh - ALTURA_DO_SEU_HEADER_SE_TIVER) para preencher a tela toda */
+	width: 100%;
+	justify-content: flex-start; /* Alinha o .contatoFormulario ao topo */
+	align-items: center; /* Centraliza o .contatoFormulario horizontalmente */
+	background-color: #f6f6f6; /* Cor de fundo da página */
+	padding: 2rem 0; /* Adiciona um respiro em cima e embaixo */
+	box-sizing: border-box;
 }
 
-.contatoFormulario{
-	max-width: 77rem;
+.contatoFormulario {
+	max-width: 70rem; /* Ajuste conforme necessário, um pouco menor pode ser melhor */
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-start;
-	width: 80%;
-	background-color: #fff;
-	padding: 2rem;
-	border-radius: 2rem;
+	/* align-items: flex-start; /* O h2 já é block e estica */
+	/* justify-content: flex-start; */
+	width: 90%; /* Um pouco mais de largura em telas maiores */
+	background-color: #fff; /* Fundo branco do "card" do formulário */
+	padding: 2rem 2.5rem; /* Aumentei um pouco o padding lateral */
+	border-radius: 1.5rem; /* Raio da borda um pouco menor */
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
 	margin-top: 2rem;
+	margin-bottom: 2rem; /* Para dar espaço no final da página também */
 }
 
-.formulario{
+.contatoFormulario h2 {
+	margin-bottom: 1.5rem; /* Espaço abaixo do título "Entre em Contato" */
+	font-size: 1.8rem;   /* Tamanho do título */
+	color: #333;
+	width: 100%; /* Para garantir que o texto não quebre de forma estranha se houver algum flex no pai */
+	text-align: left; /* Ou center, se preferir */
+}
+
+.formulario {
+	width: 100%;
+}
+
+/* Removemos as classes .itemFormularioContato, .contatoEmail .itemFormularioContato, .textoContato
+  e .itemFormularioContato input, pois a estilização excessiva delas causava problemas.
+  Os Form.Item do Ant Design já têm margens e estrutura adequadas.
+  A responsividade dos campos de E-mail e Assunto agora é controlada pelo Row e Col no JSX.
+*/
+
+/* Ajuste para o container do botão, para centralizá-lo */
+.containerBotaoFormulario .ant-form-item-control-input-content {
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	width: 100%;
+	justify-content: center; /* Centraliza o botão */
 }
 
-.contatoEmail{
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-}
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+	.contatoFormulario {
+		width: 95%;
+		padding: 1.5rem 2rem;
+		margin-top: 1.5rem;
+	}
 
-.itemFormularioContato{
-	width: 100%;
-	max-width: 72rem;
-	margin-right: 2rem;
-	background-color: #F6F6F6;
-	padding: 1.5rem 1.5rem 2rem 1.5rem;
-	border-radius: 1rem;
-}
-
-.contatoEmail .itemFormularioContato{
-	width: 100%;
-	max-width: 35rem;
-	margin-right: 2rem;
-	background-color: #F6F6F6;
-	padding: 1.5rem 1.5rem 2rem 1.5rem;
-	border-radius: 1rem;
-}
-
-.textoContato{
-	width: 100%;
-	max-width: 72rem;
-	background-color: #F6F6F6;
-	padding: 1.5rem 1.5rem 2rem 1.5rem;
-	border-radius: 1rem;
-}
-
-.itemFormularioContato input{
-	width:50%;
+	.contatoFormulario h2 {
+		font-size: 1.6rem;
+		text-align: center; /* Centraliza título em mobile */
+	}
 }
 
 @media (max-width: 600px) {
 	.contatoFormulario {
-		width: 95%;
-		padding: 1rem;
+		padding: 1.5rem 1rem; /* Padding um pouco menor em telas bem pequenas */
+		border-radius: 1rem;
 		margin-top: 1rem;
 	}
 
-	.formulario{
-		align-items: center;
+	.contatoFormulario h2 {
+		font-size: 1.4rem;
 	}
-	
+
+	/* O botão já está com width: 100% e maxWidth, deve se ajustar bem.
+       Se precisar de ajustes específicos para o botão em mobile, adicione aqui.
+       Ex: .containerBotaoFormulario button { font-size: 15px; }
+    */
 }

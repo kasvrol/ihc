@@ -1,4 +1,4 @@
-import { Form, Input, Button, message } from "antd";
+import { Form, Input, Button, message, Row, Col } from "antd"; // Adicionado Row e Col
 import { MailOutlined, UserOutlined } from "@ant-design/icons";
 import "./contato.css";
 
@@ -17,6 +17,7 @@ function Contato() {
 	};
 
 	return (
+		// Mantém a estrutura do container externo que já funcionava com o padrão das outras páginas
 		<div className="containerContato">
 			<div className="contatoFormulario">
 				<h2>Entre em Contato</h2>
@@ -28,12 +29,11 @@ function Contato() {
 					onFinishFailed={onFinishFailed}
 					autoComplete="on"
 					aria-label="Formulário de Contato"
-					className="formulario"
+					className="formulario" // A classe .formulario agora só precisa de ajustes mínimos
 				>
 					<Form.Item
 						label="Nome"
 						name="name"
-						className="itemFormularioContato"
 						rules={[
 							{
 								required: true,
@@ -42,69 +42,59 @@ function Contato() {
 						]}
 					>
 						<Input
-							prefix={
-								<UserOutlined />
-							}
-							placeholder="Seu nome"
+							prefix={<UserOutlined />}
+							placeholder="Seu nome completo"
 							aria-required="true"
-							style={{
-								maxWidth: "30rem",
-							}}
 						/>
 					</Form.Item>
-					<div className="contatoEmail">
-						<Form.Item
-							label="E-mail"
-							name="email"
-							className="itemFormularioContato"
-							rules={[
-								{
-									required: true,
-									message: "Por favor, insira seu e-mail",
-								},
-								{
-									type: "email",
-									message: "E-mail inválido",
-								},
-							]}
-						>
-							<Input
-								prefix={
-									<MailOutlined />
-								}
-								placeholder="seu@email.com"
-								aria-required="true"
-								style={{
-									maxWidth: "25rem",
-								}}
-							/>
-						</Form.Item>
 
-						<Form.Item
-							label="Assunto"
-							name="assunto"
-							className="itemFormularioContato"
-							rules={[
-								{
-									required: true,
-									message: "Por favor, insira o assunto",
-								},
-							]}
-						>
-							<Input
-								placeholder="Assunto do contato"
-								aria-required="true"
-								style={{
-									maxWidth: "20rem",
-								}}
-							/>
-						</Form.Item>
-					</div>
+					{/* Usando Row e Col para E-mail e Assunto */}
+					<Row gutter={[16, 0]}> {/* gutter={[horizontalSpacing, verticalSpacing]} */}
+						<Col xs={24} sm={24} md={12}> {/* Ocupa 24 colunas (total) em telas extra pequenas e pequenas, 12 (metade) em médias e maiores */}
+							<Form.Item
+								label="E-mail"
+								name="email"
+								rules={[
+									{
+										required: true,
+										message: "Por favor, insira seu e-mail",
+									},
+									{
+										type: "email",
+										message: "E-mail inválido",
+									},
+								]}
+							>
+								<Input
+									prefix={<MailOutlined />}
+									placeholder="seu.email@exemplo.com"
+									aria-required="true"
+								/>
+							</Form.Item>
+						</Col>
+
+						<Col xs={24} sm={24} md={12}>
+							<Form.Item
+								label="Assunto"
+								name="assunto"
+								rules={[
+									{
+										required: true,
+										message: "Por favor, insira o assunto",
+									},
+								]}
+							>
+								<Input
+									placeholder="Assunto do contato"
+									aria-required="true"
+								/>
+							</Form.Item>
+						</Col>
+					</Row>
 
 					<Form.Item
 						label="Mensagem"
 						name="message"
-						className="textoContato"
 						rules={[
 							{
 								required: true,
@@ -114,24 +104,26 @@ function Contato() {
 					>
 						<Input.TextArea
 							rows={4}
-							placeholder="Escreva sua mensagem..."
+							placeholder="Escreva sua mensagem aqui..."
 							aria-required="true"
 						/>
 					</Form.Item>
 
-					<Form.Item>
+					<Form.Item className="containerBotaoFormulario"> {/* Classe para centralizar/alinhar o botão se necessário */}
 						<Button
 							type="primary"
 							htmlType="submit"
-							block
+							// O 'block' pode ser útil se o Form.Item tiver largura controlada.
+							// Para um botão de largura fixa máxima e centralizado, estilizamos via CSS ou style prop.
 							style={{
 								height: "45px",
 								fontSize: "16px",
-								maxWidth: "20rem",
-								width: "10rem",
+								minWidth: "150px", // Garante uma largura mínima
+								width: "100%",    // Ocupa a largura disponível no seu container
+								maxWidth: "280px", // Mas não passa de 280px
 							}}
 						>
-							Enviar
+							Enviar Mensagem
 						</Button>
 					</Form.Item>
 				</Form>

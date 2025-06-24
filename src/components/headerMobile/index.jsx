@@ -47,12 +47,32 @@ const HeaderMobile = () => {
 						</Menu.Item>
 					</Link>
 
+					<SubMenu key="legislacao" title="Legislações EAD">
+						<Link to={"/legislacoes"}>
+							<Menu.Item key="legislacoes">
+								Legislações e Pareceres
+							</Menu.Item>
+						</Link>
+
+						<Link to={"/instrumentos-avaliacao"}>
+							<Menu.Item key="instrumentos-avaliacao">
+								Instrumentos de Avaliação (INEP)
+							</Menu.Item>
+						</Link>
+					</SubMenu>
+
 					<SubMenu key="UAB" title="UAB">
 					<Link to={"/uab-impugnacao"}>
 						<Menu.Item key="uab-impugnacao">
-						Contato para Recurso ou Imopugnação
+						Recurso ou Impugnação
 						</Menu.Item>
 					</Link>
+
+						<Link to={"/orientacoes-gerais"}>
+							<Menu.Item key="orientacoes-gerais">
+								Orientações Gerais
+							</Menu.Item>
+						</Link>
 					</SubMenu>
 
 					<SubMenu key="sobre" title="Sobre">
@@ -74,8 +94,8 @@ const HeaderMobile = () => {
 						</Menu.Item>
 					</Link>
 					<Link to={"/curriculo"}>
-						<Menu.Item key="curriculo">
-							Quem construiu o site
+						<Menu.Item key="curriculo">	
+							Desenvolvedores
 						</Menu.Item>
 					</Link>
 				</Menu>

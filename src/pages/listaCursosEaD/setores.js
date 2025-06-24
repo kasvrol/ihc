@@ -109,77 +109,77 @@ const cursos = [
 export const setores = [
 	{
 		id: 1,
-		nome: "📍SETOR DE PALOTINA",
+		nome: "📍 SETOR DE PALOTINA",
 		cursos: cursos,
 	},
 	{
 		id: 2,
-		nome: "📍SETOR DE EDUCAÇÃO",
+		nome: "📍 SETOR DE EDUCAÇÃO",
 		cursos: cursos,
 	},
 	{
 		id: 3,
-		nome: "📍SETOR DE ARTES COMUNICAÇÃO E DESIGN",
+		nome: "📍 SETOR DE ARTES COMUNICAÇÃO E DESIGN",
 		cursos: cursos,
 	},
 	{
 		id: 4,
-		nome: "📍SETOR DE CIÊNCIAS BIOLÓGICAS",
+		nome: "📍 SETOR DE CIÊNCIAS BIOLÓGICAS",
 		cursos: cursos,
 	},
 	{
 		id: 5,
-		nome: "📍SETOR DE CIÊNCIAS AGRÁRIAS",
+		nome: "📍 SETOR DE CIÊNCIAS AGRÁRIAS",
 		cursos: cursos,
 	},
 	{
 		id: 6,
-		nome: "📍SETOR LITORAL",
+		nome: "📍 SETOR LITORAL",
 		cursos: cursos,
 	},
 	{
 		id: 7,
-		nome: "📍SETOR DE CIÊNCIAS HUMANAS",
+		nome: "📍 SETOR DE CIÊNCIAS HUMANAS",
 		cursos: cursos,
 	},
 	{
 		id: 8,
-		nome: "📍SETOR DE CIÊNCIAS SOCIAIS E APLICADAS",
+		nome: "📍 SETOR DE CIÊNCIAS SOCIAIS E APLICADAS",
 		cursos: cursos,
 	},
 	{
 		id: 9,
-		nome: "📍SETOR DE CIÊNCIAS DA TERRA",
+		nome: "📍 SETOR DE CIÊNCIAS DA TERRA",
 		cursos: cursos,
 	},
 	{
 		id: 10,
-		nome: "CAMPUS JANDAIA DO SUL",
+		nome: "📍 CAMPUS JANDAIA DO SUL",
 		cursos: cursos,
 	},
 	{
 		id: 11,
-		nome: "📍SETOR DE EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA",
+		nome: "📍 SETOR DE EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA",
 		cursos: cursos,
 	},
 	{
 		id: 12,
-		nome: "📍SETOR DE CIÊNCIAS DA SAÚDE",
+		nome: "📍 SETOR DE CIÊNCIAS DA SAÚDE",
 		cursos: cursos,
 	},
 	{
 		id: 13,
-		nome: "📍SETOR DE CIÊNCIAS EXATAS",
+		nome: "📍 SETOR DE CIÊNCIAS EXATAS",
 		cursos: cursos,
 	},
 	{
 		id: 14,
-		nome: "📍SETOR DE TECNOLOGIA",
+		nome: "📍 SETOR DE TECNOLOGIA",
 		cursos: cursos,
 	},
 	{
 		id: 15,
-		nome: "📍CENTRO DE ESTUDOS DO MAR",
+		nome: "📍 CENTRO DE ESTUDOS DO MAR",
 		cursos: cursos,
 	},
 ];

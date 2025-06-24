@@ -87,3 +87,68 @@
 		font-size: 1.6rem;
 	}
 }
+
+/* Adicione estes estilos ao final do seu arquivo manualSite.css */
+
+.faqSection {
+	width: 100%;
+	margin-top: 3rem; /* Espaço acima da seção FAQ */
+	margin-bottom: 1rem; /* Espaço abaixo da seção FAQ */
+	padding: 0 1rem; /* Adiciona um pouco de padding lateral para o conteúdo do FAQ não colar nas bordas em telas menores */
+	box-sizing: border-box;
+}
+
+.faqTitle {
+	text-align: center;
+	margin-bottom: 1.5rem !important; /* !important para sobrescrever margem padrão do AntD Title se necessário */
+	color: #333;
+	font-size: 1.8rem !important;
+}
+
+.faqCollapse {
+	background-color: #fff; /* Garante que o fundo seja branco caso o padrão seja transparente */
+	border-radius: 8px; /* Bordas arredondadas para o container do Collapse */
+	border: 1px solid #f0f0f0; /* Uma borda sutil, similar aos painéis que fizemos antes */
+}
+
+/* Estilizando os painéis do FAQ para consistência */
+.faqCollapse .ant-collapse-item {
+	border-bottom: 1px solid #f0f0f0 !important; /* Separador entre itens */
+}
+
+.faqCollapse .ant-collapse-item:last-child {
+	border-bottom: none !important; /* Remove o separador do último item */
+}
+
+.faqCollapse .ant-collapse-header {
+	font-weight: 500; /* Deixa o texto da pergunta um pouco mais forte */
+	color: #444;
+	padding: 12px 16px !important; /* Ajuste de padding no cabeçalho do painel */
+}
+
+.faqCollapse .ant-collapse-content > .ant-collapse-content-box {
+	padding: 16px !important; /* Ajuste no padding interno do conteúdo da resposta */
+	background-color: #fafafa; /* Um fundo levemente diferente para a resposta */
+}
+
+.faqCollapse .ant-collapse-content p {
+	margin-bottom: 0; /* Remove margem inferior do parágrafo dentro da resposta, se houver apenas um */
+	line-height: 1.6;
+	color: #555;
+}
+
+/* Ajustes responsivos para o FAQ */
+@media (max-width: 768px) {
+	.faqTitle {
+		font-size: 1.6rem !important;
+	}
+	.faqSection {
+		padding: 0; /* Remove padding lateral se o .ManualSite já tiver padding suficiente */
+	}
+}
+
+@media (max-width: 480px) {
+	.faqTitle {
+		font-size: 1.4rem !important;
+	}
+}

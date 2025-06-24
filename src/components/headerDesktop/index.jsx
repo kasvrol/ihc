@@ -14,12 +14,30 @@ const items = [
 		icon: <AppstoreOutlined />,
 	},
 	{
+		key: "legislacao",
+		label: "Legislações EAD",
+		children: [
+			{
+				label: <Link to="/legislacoes">Legislações e Pareceres</Link>,
+				key: "legislacoes",
+			},
+			{
+				label: <Link to="/instrumentos-avaliacao">Instrumentos de Avaliação (INEP)</Link>,
+				key: "instrumentos-avaliacao",
+			},
+		],
+	},
+	{
 		key: "uab",
 		label: "UAB",
 		children: [
 			{
-				label: <Link to="/uab-impugnacao">Contato para Recurso ou Impugnação</Link>,
+				label: <Link to="/uab-impugnacao">Recurso ou Impugnação</Link>,
 				key: "uab-impugnacao",
+			},
+			{
+				label: <Link to="/orientacoes-gerais">Orientações Gerais</Link>,
+				key: "orientacoes-gerais",
 			},
 		],
 	},
@@ -37,7 +55,7 @@ const items = [
 	},
 	{
 		key: "curriculo",
-		label: <Link to="/curriculo">Quem construiu o site</Link>,
+		label: <Link to="/curriculo">Desenvolvedores</Link>,
 	},
 ];
 

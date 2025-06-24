@@ -25,17 +25,11 @@ const items = [
 	},
 	{
 		key: "sobre",
-		label: "Sobre",
-		children: [
-			{
-				label: <Link to="/cursos-ead">Cursos com carga horária EaD</Link>,
-				key: "cursos-ead",
-			},
-			{
-				label: <Link to="/manual-site">Manual do Site</Link>,
-				key: "manual-site",
-			},
-		],
+		label: <Link to="/sobre">Sobre</Link>
+	},
+	{
+		label: <Link to="/cursos-ead">Cursos com carga horária EaD</Link>,
+		key: "cursos-ead",
 	},
 	{
 		key: "contato",

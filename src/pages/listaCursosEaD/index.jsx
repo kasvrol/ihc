@@ -30,6 +30,7 @@ const ListaCursosEaD = () => {
 
 	return (
 		<div className="containerListaCursos">
+			<h1>Cursos com carga horária EaD</h1>
 		<List
 			header={<h2>Lista de Setores</h2>}
 			bordered

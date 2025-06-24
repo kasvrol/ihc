@@ -39,9 +39,9 @@ const Editais = () => {
 
 	return (
 		<div className="containerEditais">
+			<h2 style={{paddingLeft: "2rem"}}>Editais</h2>
 			<div className="tituloEditais">
-				<section onClick={()=> mudanca()}><SwapOutlined  rotate={90}/></section>
-				{/*icon */}
+				<section onClick={()=> mudanca()}><SwapOutlined  rotate={90}/></section>				
 				<h3>{titulo? "Mais Antigos":"Mais Recentes"}</h3>
 			</div>
 			<div className="listaEditais">

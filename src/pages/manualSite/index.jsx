@@ -1,8 +1,7 @@
 import "./manualSite.css";
 import VideoPlayer from "../../components/videoPlayer";
 import { BookOutlined, QuestionCircleOutlined } from "@ant-design/icons"; // Adicionei QuestionCircleOutlined para o FAQ
-import { Link } from "react-router-dom";
-import { Collapse, Typography } from "antd"; // Importações do Ant Design
+import { Collapse, Typography, Button } from "antd"; // Importações do Ant Design
 
 const { Title } = Typography;
 const { Panel } = Collapse;
@@ -30,17 +29,23 @@ const faqData = [
 ];
 
 function ManualSite() {
-	return (
+	return (		
 		<div className="containerManualSite">
-			<div className="ManualSite">
+			<div className = "ManualSite">
 				<h2>Sobre o novo site</h2>
-				<Link to="/caminho-do-manual-completo" className="divManual"> {/* Adicionei um to={} para o Link */}
-					<p>MANUAL DO SISTEMA</p>{" "}
-					<BookOutlined style={{ fontSize: "10rem" }} /> {/* Removi twoToneColor pois não é uma prop padrão do BookOutlined sem ser twoTone */}
-				</Link>
+				<Button
+					type="primary"
+					icon={<BookOutlined style={{ fontSize: "7rem" }} />}
+					size="large"
+					href="https://drive.google.com/file/d/1VlPalW4lbaaO9adfOPa5EsmY5EbmQdMX/view?usp=sharing"
+					target="_blank"
+					className="divManual"		>
+					 
+					MANUAL DO SISTEMA
+				</Button>
 				<div className="videoManual">
-					<h3>Confira mais sobre o novo site</h3> {/* Ajustei um pouco o texto */}
-					<VideoPlayer videoSrc="https://www.youtube.com/embed/BYTxPFj44uo" /> {/* Mantenha seu videoSrc real aqui */}
+					<h3>Confira mais sobre o novo site</h3> 
+					<VideoPlayer videoSrc="https://www.youtube.com/embed/BYTxPFj44uo" /> 
 				</div>
 
 				{/* Nova Seção de FAQ */}

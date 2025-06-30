@@ -7,7 +7,31 @@
   height: 100vh;
 }
 
-h3 {
+h2 {
   font-size: 24px;
   font-weight: 400;
 }
+
+a:hover {
+    color: black; /* Define a cor da fonte para preto quando o mouse passa por cima */
+}
+
+@media screen and (max-width: 768px) {
+  button, a {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
+  }
+  
+  input, textarea {
+    min-width: 200px;
+    min-height: 40px;
+    padding: 10px;
+  }
+  
+  img {
+    min-width: 100px;
+    min-height: 100px;
+  }
+}
+

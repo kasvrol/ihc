@@ -11,6 +11,7 @@ import Legislacao from "./pages/legislacao/index.jsx";
 import Inep from "./pages/inep/index.jsx";
 import Cne from "./pages/cne/index.jsx";
 import OrientacoesGerais from "./pages/orientacoes/index.jsx";
+import TelaEdital from "./pages/edital/index.jsx"
 
 function App() {
 
@@ -23,12 +24,12 @@ function App() {
           <Route path="/uab-impugnacao" element={<FormularioImpugnacao />} />
           <Route path="/cursos-ead" element={<ListaCursosEaD />} />
           <Route path="/curriculo" element={<CriadoresVitrine />} />
-          <Route path="/manual-site" element={<ManualSite />} />
-          <Route path="/sobre" element={<ListaCursosEaD />} />
+          <Route path="/sobre" element={<ManualSite />} />
           <Route path="/legislacoes" element={<Legislacao />} />
           <Route path="/instrumentos-avaliacao" element={<Inep />} />
           <Route path="/pareceres" element={<Cne />} />
           <Route path="/orientacoes-gerais" element={<OrientacoesGerais />} />
+          <Route path="/edital" element={<TelaEdital />} />
         </Route>
       </Routes>
     </BrowserRouter>  

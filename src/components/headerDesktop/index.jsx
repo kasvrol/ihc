@@ -46,7 +46,7 @@ const items = [
 		label: <Link to="/sobre">Sobre</Link>
 	},
 	{
-		label: <Link to="/cursos-ead">Cursos com carga horária EaD</Link>,
+		label: <Link to="/cursos-ead">Cursos</Link>,
 		key: "cursos-ead",
 	},
 	{

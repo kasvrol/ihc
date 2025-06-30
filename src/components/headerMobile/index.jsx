@@ -75,18 +75,17 @@ const HeaderMobile = () => {
 						</Link>
 					</SubMenu>
 
-					<SubMenu key="sobre" title="Sobre">
-					<Link to={"/"}>
+					
+					<Link to={"/cursos-ead"}>
 						<Menu.Item key="cursos-ead">
-						Cursos com carga horária EaD
+						Cursos
 						</Menu.Item>
 					</Link>
-					<Link to={"/manual-site"}>
-						<Menu.Item key="manual-site">
-						Manual do Site
+					<Link to={"/sobre"}>
+						<Menu.Item key="sobre">
+						Sobre
 						</Menu.Item>
 					</Link>
-					</SubMenu>
 
 					<Link to={"/contato"}>
 						<Menu.Item key="contato">

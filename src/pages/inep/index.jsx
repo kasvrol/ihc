@@ -8,19 +8,19 @@ const { Title } = Typography;
 const instrumentos = [
     {
         titulo: "INSTRUMENTOS DE AVALIAÇÃO DE CURSOS DE GRADUAÇÃO (IACG) – INEP – 2017",
-        link: "#",
+        link: "https://cad.capes.gov.br/ato-administrativo-detalhar?idAtoAdmElastic=16423",
     },
     {
         titulo: "INSTRUMENTOS DE AVALIAÇÃO INSTITUCIONAL EXTERNA (IAIE) – PRESENCIAL E A DISTÂNCIA – RECREDENCIAMENTO – INEP 2017",
-        link: "#",
+        link: "https://cad.capes.gov.br/ato-administrativo-detalhar?idAtoAdmElastic=16423",
     },
     {
         titulo: "INSTRUMENTO DE AVALIAÇÃO DE CURSOS DE GRADUAÇÃO PRESENCIAL E A DISTÂNCIA: Autorização",
-        link: "#",
+        link: "https://cad.capes.gov.br/ato-administrativo-detalhar?idAtoAdmElastic=16445",
     },
     {
         titulo: "INSTRUMENTO DE AVALIAÇÃO DE CURSOS DE GRADUAÇÃO PRESENCIAL E A DISTÂNCIA: Reconhecimento e renovação de reconhecimento",
-        link: "#",
+        link: "https://cad.capes.gov.br/ato-administrativo-detalhar?idAtoAdmElastic=10902",
     },
 ];
 

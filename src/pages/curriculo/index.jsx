@@ -22,6 +22,7 @@ const CriadoresVitrine = () => {
 						hoverable
 						key={criador.id}
 						className="cardCurriculo"
+						cover={<Avatar src={criador.imagem} size={128} className='avatarCurriculo' />}
 					>
 						<image
 							width={128}

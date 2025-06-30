@@ -45,7 +45,7 @@ function ManualSite() {
 				</Button>
 				<div className="videoManual">
 					<h3>Confira mais sobre o novo site</h3> 
-					<VideoPlayer videoSrc="https://www.youtube.com/embed/BYTxPFj44uo" /> 
+					<VideoPlayer videoSrc="https://www.youtube.com/embed/6RRLyiEMWCg" /> 
 				</div>
 
 				{/* Nova Seção de FAQ */}
